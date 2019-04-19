@@ -25,4 +25,12 @@ export class SecondPage {
     console.log('ionViewDidLoad SecondPage');
   }
 
+  navigateBack(): void{
+    this.navCtrl.pop();
+  }
+
+  navigateToThird(): void{
+    this.navCtrl.push('ThirdPage');
+  }
+
 }
