@@ -1,17 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+/**
+ * Generated class for the HomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
 
-  constructor(private navCtrl: NavController) {
-
+  constructor(private navCtrl: NavController, public navParams: NavParams) {
   }
 
-  navigateToSecondPage(): void {
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+  }
+
+  navigateToSecondPage(): void{
     this.navCtrl.push('SecondPage');
   }
 
