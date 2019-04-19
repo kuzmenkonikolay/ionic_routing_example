@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(private navCtrl: NavController, public navParams: NavParams) {
+  constructor(private navCtrl: NavController, private navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -23,7 +23,9 @@ export class HomePage {
   }
 
   navigateToSecondPage(): void{
-    this.navCtrl.push('SecondPage');
+    this.navCtrl.push('SecondPage', {
+      message: "Hello from the HomePage!"
+    });
   }
 
 }
